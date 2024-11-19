@@ -1,20 +1,22 @@
+name: Deploy via FTP
+
 on:
-    push:
-        branches:
-            - master
-name: 🚀 Deploy website on push
+  push:
+    branches:
+      - main
+
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v4
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: sagatak.com
-        username: ${{ secrets.ftp_username }}
-        password: ${{ secrets.ftp_password }}
-        server-dir: /sagata/
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.0
+        with:
+          server: ftp.yourdomain.com
+          username: sagataftp@sagatak.com
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /public_html/sagata/
