@@ -16,7 +16,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.0
         with:
           server: ftp.yourdomain.com
-          username: sagataftp@sagatak.com
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          server-dir: /public_html/sagata/
+          server-dir: /sagata/
