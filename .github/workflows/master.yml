@@ -1,10 +1,9 @@
-name: Deploy via FTP
-
 on:
   push:
     branches:
       - master
 
+name: 🚀 Deploy website on push
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -15,7 +14,9 @@ jobs:
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.0
         with:
-          server: ftp.yourdomain.com
+          server: sagatak.com/
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /sagata/
+
+        
