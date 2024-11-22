@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-8pb7t*93bp!41q859ahrhg=t7*62ddr56^uqd(j-fupvis6nc)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["sagatak.com", '*']
+ALLOWED_HOSTS = ["sagatak.com","buycloud.host", '*']
 
 
 # Application definition
@@ -77,12 +77,12 @@ WSGI_APPLICATION = 'sagata.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
@@ -102,6 +102,17 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'buycloud_sagata',
+        'USER': 'buycloud_sagata',
+        'PASSWORD': 'sagata4206430@@##__@',
+        'HOST': 'localhost',
+        'PORT': '3306'
+    }
+}
 
 
 # Internationalization
