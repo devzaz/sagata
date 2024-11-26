@@ -106,8 +106,8 @@ AUTH_PASSWORD_VALIDATORS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'buycloud_sagata',
-        'USER': 'buycloud_sagata',
+        'NAME': 'gptkvezo_sagata',
+        'USER': 'gptkvezo_sagata',
         'PASSWORD': 'sagata4206430@@##__@',
         'HOST': 'localhost',
         'PORT': '3306'
