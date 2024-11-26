@@ -21,6 +21,12 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+
+admin.site.site_header="Sagata Admin Panel"
+admin.site.site_title="Sagata Admin Login"
+admin.site.index_title="Welcome to Sagata Admin Panel"
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls'))
